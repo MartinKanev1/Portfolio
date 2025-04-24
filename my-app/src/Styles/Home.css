@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1c0c3d, #0f1624);
+  overflow-x: hidden;
+}
+
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #1c0c3d, #0f1624);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    padding-top: 70px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #8e44ad88, transparent 70%);
+    filter: blur(60px);
+    z-index: 0;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .hero h1 span {
+    color: #00f7ff;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  .hero-button {
+    background: linear-gradient(90deg, #8e44ad, #00c6ff);
+    padding: 12px 24px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  .hero-button:hover {
+    background: linear-gradient(90deg, #00c6ff, #8e44ad);
+    transform: scale(1.05);
+  }
+
+  .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    z-index: 1;
+  }
+  
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00f7ff;
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.4);
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero-contact {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ccc;
+  }
+  
+  .email-link {
+    color: #00f7ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 6px;
+  }
+  
+  .email-link:hover {
+    text-decoration: underline;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: auto; 
+      min-height: calc(100vh - 90px); 
+      padding-top: 90px; 
+      padding-bottom: 40px; 
+    }
+  
+    .hero-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 0; 
+      gap: 20px;
+    }
+  
+    .hero h1 {
+      font-size: 32px;
+    }
+  
+    .hero p {
+      font-size: 16px;
+    }
+  
+    .hero-image img {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .hero-content {
+      max-width: 100%;
+    }
+  }
+  
+  
+  
