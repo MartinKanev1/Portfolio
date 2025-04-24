@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header className="header">
-      <Link to="/home" className="logo-button">
+      <Link to="/" className="logo-button">
         <div className="logo">My Portfolio</div>
       </Link>
       <nav className="nav-links">
