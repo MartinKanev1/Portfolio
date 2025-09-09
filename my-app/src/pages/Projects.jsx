@@ -10,10 +10,19 @@ import app1 from '../assets/AutoShop1.png'
 import app2 from '../assets/AutoShop2.png'
 import app3 from '../assets/AutoShop3.png'
 import app4 from '../assets/AutoShop4.png'
+import sim1 from '../assets/sim.png'
+import sim2 from '../assets/sim2.png'
+import sim3 from '../assets/sim3.png'
+import sim4 from '../assets/sim4.png'
+import sim5 from '../assets/sim5.png'
+import sim6 from '../assets/sim6.png'
+import sim7 from '../assets/sim7.png'
 
 const imageList = [project1, project2, project3, project4, project5];
 
 const imageList2 = [app1, app2, app3, app4];
+
+const imageList3 = [sim1, sim2, sim3, sim4, sim5, sim6, sim7];
 
 const Projects = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -92,7 +101,57 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="project-card column-layout">
+        
+          <div className="project-card column-layout">
+          
+          <div className="carousel">
+            <button onClick={handlePrevAutoShop} className="carousel-btn left">←</button>
+            <img src={imageList3[currentImageAutoShop]} alt="Project screenshot" className="carousel-image" />
+            <button onClick={handleNextAutoShop} className="carousel-btn right">→</button>
+          </div>
+
+
+
+          <div className="project-details below-layout">
+            <h3>Crytpo-Trading-Simulator</h3>
+            <p>
+             A simulated cryptocurrency trading platform built with Java, Spring Boot, React.js and PostgreSQL. Dessign pattern - MVC.
+            </p>
+
+            <ul className="tech-list">
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>React</li>
+              <li>JavaScript</li>
+              <li>PostgreSQL</li>
+              <li>Spring Security</li>
+              <li>Cloudinary</li>
+              <li>Docker</li>
+              <li>JUnit</li>
+              <li>Swagger</li>
+            </ul>
+
+            <ul className="feature-list">
+              <li> View real-time prices of the top 20 cryptocurrencies using the Kraken WebSocket API</li>
+              <li> Maintain a virtual USD account balance</li>
+              <li> Buy and sell cryptocurrencies</li>
+              <li>Track their portfolio holdings</li>
+              <li>View transaction history including profit/loss</li>
+              <li>Reset their account to the original state</li>
+              <li>🔐 Spring Security for authentication & JWT</li>
+              
+            </ul>
+
+            <div className="project-links">
+              <a href="https://github.com/MartinKanev1/trading-sim" target="_blank" rel="noopener noreferrer">GitHub</a>
+              
+            </div>
+          </div>
+        </div>
+
+        
+
+          <div className="project-card column-layout">
           
           <div className="carousel">
             <button onClick={handlePrevAutoShop} className="carousel-btn left">←</button>
